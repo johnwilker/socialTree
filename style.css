@@ -1,0 +1,178 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;800&family=Roboto:wght@400;900&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body * {
+    font-family: 'Montserrat', sans-serif ;
+}
+
+main {
+    margin: 0 auto;
+}
+
+.profile {
+    margin-top: 32px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #000;
+    gap: 8px;
+}
+
+.profile p {
+    font-weight: 600;
+}
+
+.profile p:hover {
+    transform: scale(1.08);
+    transition: transform .3s;
+}
+
+.profile img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 2px solid #108600;
+    padding: 3px;
+}
+
+.profile img:hover {
+    transform: scale(1.05);
+    transition: transform .3s;
+}
+
+.links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 32px;
+}
+
+.links ul {
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+    padding-left: 0;
+}
+
+.links li {
+    display: flex;
+    list-style: none;
+    border: 2px solid #108600;
+    width: 300px;
+    height: 30px;
+    justify-content: center;
+    align-items: center;
+    border-radius: .5rem;
+    color: #000;
+    font-weight: 600;
+}
+
+.links li:hover {
+    transform: scale(1.05);
+    transition: transform .3s;
+}
+
+.social-media {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+    margin-top: 32px;
+}
+
+.social-media ul {
+    list-style: none;
+    display: flex;
+    gap: 14px
+}
+
+.social-media li:hover {
+    transform: scale(1.15);
+    transition: transform .3s;
+}
+
+.profile img {
+    animation: fromTop .7s .3s backwards;
+}
+
+.profile p {
+    animation: fromBack 1.6s .3s backwards;
+}
+
+.links {
+    animation: fromSide .7s .3s backwards;
+}
+
+.links ul li:nth-child(1) {
+    animation: fromSide .7s .3s backwards;
+    animation-delay: .0s;
+}
+
+.links ul li:nth-child(2) {
+    animation: fromSide .7s .3s backwards;
+    animation-delay: .15s;
+}
+
+.links ul li:nth-child(3) {
+    animation: fromSide .7s .3s backwards;
+    animation-delay: .3s;
+}
+
+.links ul li:nth-child(4) {
+    animation: fromSide .7s .3s backwards;
+    animation-delay: .45s;
+}
+
+.social-media {
+    animation: fromBottom .7s .3s backwards;
+}
+
+/* ANIMATIONS */ 
+
+@keyframes fromTop {
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fromBack {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fromSide {
+    from {
+        opacity: 0;
+        transform: translateX(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fromBottom {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
